@@ -10,8 +10,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "The Canvas",
-  description: "Build Something Great!",
+  title: "Online Design Tool",
+  description: "Create and export your designs easily.",
 };
 
 export default async function RootLayout({

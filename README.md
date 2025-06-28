@@ -1,6 +1,6 @@
-# Canva-Clone
+# Online Design Tool
 
-A modern web-based design tool inspired by Canva, built with Next.js, React, and Fabric.js. Create, edit, and export beautiful designs directly in your browser.
+A modern web-based design tool. Create, edit, and export beautiful designs directly in your browser.
 
 ## Features
 - Drag-and-drop canvas editor
@@ -34,13 +34,15 @@ A modern web-based design tool inspired by Canva, built with Next.js, React, and
    ```
 3. Set up your environment variables:
    - Create a `.env.local` file in the `canva-clone` directory.
-   - Add the following (if you want Unsplash integration):
+   - Add the following:
      ```env
-     NEXT_PUBLIC_UNSPLASH_ACCESS_KEY=your_unsplash_access_key
      DATABASE_URL=your_postgres_connection_string
      UPLOADTHING_SECRET=your_uploadthing_secret
      ```
-   - If you do not want Unsplash images, you can skip the Unsplash key.
+   - Optionally, add an Unsplash key if you want Unsplash images:
+     ```env
+     NEXT_PUBLIC_UNSPLASH_ACCESS_KEY=your_unsplash_access_key
+     ```
 
 4. Set up the database:
    - Run the setup script to initialize tables and sample data:
@@ -69,8 +71,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Environment Variables
 - `DATABASE_URL`: PostgreSQL connection string (required)
-- `NEXT_PUBLIC_UNSPLASH_ACCESS_KEY`: Unsplash API key (optional, for Unsplash images)
 - `UPLOADTHING_SECRET`: Secret for UploadThing (required for image uploads)
+- `NEXT_PUBLIC_UNSPLASH_ACCESS_KEY`: Unsplash API key (optional, for Unsplash images)
 
 
 
