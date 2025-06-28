@@ -1,6 +1,5 @@
 import { fabric } from "fabric";
 import { useCallback, useState, useMemo, useRef } from "react";
-import { jsPDF } from "jspdf";
 
 import { 
   Editor, 
@@ -100,16 +99,19 @@ const buildEditor = ({
     autoZoom();
   };
 
-  const savePdf = () => {
+  const savePdf = async () => {
     const options = generateSaveOptions();
     canvas.setViewportTransform([1, 0, 0, 1, 0, 0]);
     const dataUrl = canvas.toDataURL(options);
+    const { jsPDF } = await import("jspdf");
+    const width = options.width ?? 595;
+    const height = options.height ?? 842;
     const pdf = new jsPDF({
-      orientation: options.width > options.height ? "l" : "p",
+      orientation: width > height ? "l" : "p",
       unit: "px",
-      format: [options.width, options.height],
+      format: [width, height] as [number, number],
     });
-    pdf.addImage(dataUrl, "PNG", 0, 0, options.width, options.height);
+    pdf.addImage(dataUrl, "PNG", 0, 0, width, height);
     pdf.save(`${Date.now()}.pdf`);
     autoZoom();
   };

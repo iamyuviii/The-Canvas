@@ -1,7 +1,7 @@
 import { fabric } from "fabric";
 import { ITextboxOptions } from "fabric/fabric-impl";
 import * as material from "material-colors";
-
+import { jsPDF } from "jspdf";
 export const JSON_KEYS = [
   "name",
   "gradientAngle",

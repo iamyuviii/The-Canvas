@@ -33,8 +33,8 @@ const app = new Hono()
 
         return c.json({ data });
       } catch (error) {
-        console.error("Error fetching templates:", error);
-        return c.json({ error: error.message }, 500);
+        console.error("Error fetching templates:", error instanceof Error ? error.message : String(error));
+        return c.json({ error: error instanceof Error ? error.message : String(error) }, 500);
       }
     },
   )
@@ -118,8 +118,8 @@ const app = new Hono()
           nextPage: data.length === limit ? page + 1 : null,
         });
       } catch (error) {
-        console.error("Error fetching projects:", error);
-        return c.json({ error: error.message }, 500);
+        console.error("Error fetching projects:", error instanceof Error ? error.message : String(error));
+        return c.json({ error: error instanceof Error ? error.message : String(error) }, 500);
       }
     },
   )
@@ -213,8 +213,8 @@ const app = new Hono()
 
         return c.json({ data: data[0] });
       } catch (error) {
-        console.error("Error creating project:", error);
-        return c.json({ error: error.message }, 500);
+        console.error("Error creating project:", error instanceof Error ? error.message : String(error));
+        return c.json({ error: error instanceof Error ? error.message : String(error) }, 500);
       }
     },
   );
