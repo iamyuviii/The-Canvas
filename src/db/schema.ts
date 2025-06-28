@@ -97,11 +97,7 @@ export const projects = pgTable("project", {
     .primaryKey()
     .$defaultFn(() => crypto.randomUUID()),
   name: text("name").notNull(),
-  userId: text("userId")
-    .notNull()
-    .references(() => users.id, {
-      onDelete: "cascade",
-    }),
+  userId: text("userId"),
   json: text("json").notNull(),
   height: integer("height").notNull(),
   width: integer("width").notNull(),

@@ -1,1 +1,4 @@
-export { auth as middleware } from "@/auth";
+// Removed authentication middleware - allowing direct access
+export function middleware() {
+  // No authentication required
+}

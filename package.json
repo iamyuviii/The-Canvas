@@ -12,7 +12,7 @@
     "db:studio": "bunx drizzle-kit studio"
   },
   "dependencies": {
-    "@auth/core": "^0.34.1",
+    "@auth/core": "^0.40.0",
     "@auth/drizzle-adapter": "^1.4.1",
     "@hono/auth-js": "^1.0.10",
     "@hono/zod-validator": "^0.2.2",
@@ -40,7 +40,7 @@
     "lodash.debounce": "^4.0.8",
     "lucide-react": "^0.399.0",
     "material-colors": "^1.2.6",
-    "next": "14.2.4",
+    "next": "^14.2.30",
     "next-auth": "^5.0.0-beta.19",
     "next-themes": "^0.3.0",
     "react": "^18",
@@ -70,7 +70,7 @@
     "@types/react-color": "^3.0.12",
     "@types/react-dom": "^18",
     "dotenv": "^16.4.5",
-    "drizzle-kit": "^0.22.8",
+    "drizzle-kit": "^0.31.4",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
     "pg": "^8.12.0",

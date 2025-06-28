@@ -67,9 +67,7 @@ export default {
 
         return user;
       },
-    }), 
-    GitHub, 
-    Google
+    })
   ],
   pages: {
     signIn: "/sign-in",

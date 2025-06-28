@@ -27,7 +27,7 @@ export const useCreateProject = () => {
     },
     onError: () => {
       toast.error(
-        "Failed to create project. The session token may have expired, logout and login again, and everything will work fine."
+        "Failed to create project. Please try again."
       );
     },
   });

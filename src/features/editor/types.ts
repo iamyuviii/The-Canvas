@@ -105,8 +105,6 @@ export type ActiveTool =
   | "opacity"
   | "filter"
   | "settings"
-  | "ai"
-  | "remove-bg"
   | "templates";
 
 export const FILL_COLOR = "rgba(0,0,0,1)";
@@ -208,6 +206,7 @@ export interface Editor {
   saveJpg: () => void;
   saveSvg: () => void;
   saveJson: () => void;
+  savePdf: () => void;
   loadJson: (json: string) => void;
   onUndo: () => void;
   onRedo: () => void;
